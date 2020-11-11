@@ -28,6 +28,9 @@ import java.util.Optional;
 import java.util.Random;
 import java.util.UUID;
 
+//my custom thing cause there is no underwater tameable mob YET
+
+
 public abstract class LeoEntity extends TameableEntity {
     protected LeoEntity(EntityType<? extends LeoEntity> type, World p_i48565_2_) {
         super(type, p_i48565_2_);
