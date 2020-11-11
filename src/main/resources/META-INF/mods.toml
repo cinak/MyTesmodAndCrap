@@ -43,9 +43,9 @@ the testing mod for all of cinaks attempts'''
     versionRange="[1.15.2]"
     ordering="NONE"
     side="BOTH"
-[[dependencies.geckolib]]
+[[dependencies.testermodding]]
 modId="geckolib"
 mandatory=true
-versionRange="[1.16.1]"
-ordering="BOTH"
+versionRange="[, 2.5)"
+ordering="NONE"
 side="BOTH"
