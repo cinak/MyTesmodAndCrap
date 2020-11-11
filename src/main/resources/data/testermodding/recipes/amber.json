@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "testermodding:amber_block"
+    }
+  ],
+  "result":
+  {
+    "item": "testermodding:amber",
+    "count": 9
+  }
+}

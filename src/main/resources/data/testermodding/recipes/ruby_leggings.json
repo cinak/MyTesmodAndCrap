@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xxx",
+    "xfx",
+    "xfx"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "testermodding:ruby"
+    },
+    "f":
+    {
+      "item": "minecraft:air"
+    }
+  },
+
+  "result":
+  {
+    "item": "testermodding:ruby_leggings",
+    "count": 1
+  }
+}

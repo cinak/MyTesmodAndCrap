@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "fxf",
+    "fxf",
+    "faf"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "testermodding:ruby"
+    }, "a":
+  {
+    "item": "minecraft:stick"
+  }, "f":
+  {
+    "item": "minecraft:air"
+  }
+  },
+
+  "result":
+  {
+    "item": "testermodding:ruby_sword",
+    "count": 1
+  }
+}

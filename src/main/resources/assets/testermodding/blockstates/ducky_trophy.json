@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "testermodding:block/ducky_trophy" },
+    "facing=south": { "model": "testermodding:block/ducky_trophy", "y":  180},
+    "facing=west": { "model": "testermodding:block/ducky_trophy", "y":  270},
+    "facing=east": { "model": "testermodding:block/ducky_trophy", "y":  90}
+  }
+}

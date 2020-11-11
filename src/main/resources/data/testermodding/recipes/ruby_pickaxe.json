@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xxx",
+    "faf",
+    "faf"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "testermodding:ruby"
+    }, "a":
+  {
+    "item": "minecraft:stick"
+  }, "f":
+  {
+    "item": "minecraft:air"
+  }
+  },
+
+  "result":
+  {
+    "item": "testermodding:ruby_pickaxe",
+    "count": 1
+  }
+}
