@@ -51,14 +51,14 @@ public class DrakelDream
 
     private void doClientStuff(final FMLClientSetupEvent event) { }
 
-    public static final ItemGroup TAB = new ItemGroup("testTab") {
+    public static final ItemGroup TAB = new ItemGroup("DrakelsDreamItemTab") {
         @Override
         public ItemStack createIcon(){
             return new ItemStack(RegistryHandler.AMBER.get());
         }
 
     };
-    public static final ItemGroup TAR = new ItemGroup("testBlockTab") {
+    public static final ItemGroup TAR = new ItemGroup("DrakelDreamBlockTab") {
         @Override
         public ItemStack createIcon(){
             return new ItemStack(RegistryHandler.AMBER.get());
