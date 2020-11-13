@@ -10,7 +10,7 @@ import net.minecraft.client.renderer.entity.model.QuadrupedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.util.math.MathHelper;
 
-public class CrawlerModel<T extends CrawlerEntity> extends QuadrupedModel<T> {
+public class CrawlerModel<T extends CrawlerEntity> extends AgeableModel<T> {
 
     private final ModelRenderer head;
     private final ModelRenderer body;
@@ -22,7 +22,6 @@ public class CrawlerModel<T extends CrawlerEntity> extends QuadrupedModel<T> {
 
 
     public CrawlerModel() {
-        super(12, 0.0F, false, 10.0F, 4.0F, 2.0F, 2.0F, 24);
         textureWidth = 64;
         textureHeight = 32;
 
@@ -58,19 +57,11 @@ public class CrawlerModel<T extends CrawlerEntity> extends QuadrupedModel<T> {
     }
 
     @Override
-    public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha){
-        head.render(matrixStack, buffer, packedLight, packedOverlay);
-        body.render(matrixStack, buffer, packedLight, packedOverlay);
-        legFrontLeft.render(matrixStack, buffer, packedLight, packedOverlay);
-        legFrontRight.render(matrixStack, buffer, packedLight, packedOverlay);
-        legBackRight.render(matrixStack, buffer, packedLight, packedOverlay);
-        legBackLeft.render(matrixStack, buffer, packedLight, packedOverlay);
+    public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
+        super.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
     }
 
-    @Override
-    protected Iterable<ModelRenderer> getHeadParts() {
-        return null;
-    }
+
 
     public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {
         modelRenderer.rotateAngleX = x;
@@ -78,8 +69,15 @@ public class CrawlerModel<T extends CrawlerEntity> extends QuadrupedModel<T> {
         modelRenderer.rotateAngleZ = z;
     }
 
+    @Override
     protected Iterable<ModelRenderer> getBodyParts() {
-return null;    }
+        return ImmutableList.of(this.body, this.legBackLeft, this.legBackRight, this.legFrontLeft, this.legFrontRight);
+    }
+
+    @Override
+    protected Iterable<ModelRenderer> getHeadParts() {
+        return ImmutableList.of(this.head);
+    }
 
 
 

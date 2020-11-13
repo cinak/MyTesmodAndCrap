@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=north": { "model": "drakeldream:block/ducky_trophy" },
-    "facing=south": { "model": "drakeldream:block/ducky_trophy", "y":  180},
-    "facing=west": { "model": "drakeldream:block/ducky_trophy", "y":  270},
-    "facing=east": { "model": "drakeldream:block/ducky_trophy", "y":  90}
-  }
-}

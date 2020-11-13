@@ -17,6 +17,8 @@ public class CrawlerRenderer extends MobRenderer<CrawlerEntity, CrawlerModel<Cra
         super(renderManagerIn, new CrawlerModel<>(), 0.7F);
     }
 
+
+
     @Override
     public ResourceLocation getEntityTexture(CrawlerEntity entity) {
         return TEXTURE;

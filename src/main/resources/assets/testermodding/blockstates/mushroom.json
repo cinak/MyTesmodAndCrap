@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=north": { "model": "drakeldream:block/mushroom" },
-    "facing=south": { "model": "drakeldream:block/mushroom", "y":  180},
-    "facing=west": { "model": "drakeldream:block/mushroom", "y":  270},
-    "facing=east": { "model": "drakeldream:block/mushroom", "y":  90}
-  }
-}
