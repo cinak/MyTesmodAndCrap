@@ -7,6 +7,7 @@ import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.passive.AnimalEntity;
+import net.minecraft.entity.passive.CowEntity;
 import net.minecraft.entity.passive.SheepEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.AbstractArrowEntity;
@@ -49,10 +50,9 @@ public class CrawlerEntity extends AnimalEntity {
     }
 
     public CrawlerEntity createChild(AgeableEntity ageable) {
-        CrawlerEntity crawlerEntity = (CrawlerEntity)ageable;
-        CrawlerEntity crawlerEntity1 = ModEntityTypes.CRAWLER.get().create(this.world);
-        return crawlerEntity1;
+        return ModEntityTypes.CRAWLER.get().create(this.world);
     }
+
 
     /**
      * Checks if the parameter is an item which this animal can be fed to breed it (wheat, carrots or seeds depending on
