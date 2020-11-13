@@ -1,6 +1,7 @@
 package com.cinak.test.client.model;
 
 import com.cinak.test.entities.CrawlerEntity;
+import com.google.common.collect.ImmutableList;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.client.renderer.entity.model.AgeableModel;
@@ -21,7 +22,7 @@ public class CrawlerModel<T extends CrawlerEntity> extends AgeableModel<T> {
 
 
     public CrawlerModel() {
-
+        super(false, 24.0F, 0.0F);
         textureWidth = 64;
         textureHeight = 32;
 
@@ -71,16 +72,15 @@ public class CrawlerModel<T extends CrawlerEntity> extends AgeableModel<T> {
         return null;
     }
 
-    @Override
-    protected Iterable<ModelRenderer> getBodyParts() {
-        return null;
-    }
-
     public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {
         modelRenderer.rotateAngleX = x;
         modelRenderer.rotateAngleY = y;
         modelRenderer.rotateAngleZ = z;
     }
+
+    protected Iterable<ModelRenderer> getBodyParts() {
+return null;    }
+
 
 
     @Override
