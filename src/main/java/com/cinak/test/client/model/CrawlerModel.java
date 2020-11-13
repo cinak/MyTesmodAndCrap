@@ -3,12 +3,13 @@ package com.cinak.test.client.model;
 import com.cinak.test.entities.CrawlerEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
+import net.minecraft.client.renderer.entity.model.AgeableModel;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.model.QuadrupedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.util.math.MathHelper;
 
-public class CrawlerModel<T extends CrawlerEntity> extends EntityModel<T> {
+public class CrawlerModel<T extends CrawlerEntity> extends AgeableModel<T> {
 
     private final ModelRenderer head;
     private final ModelRenderer body;
@@ -17,7 +18,10 @@ public class CrawlerModel<T extends CrawlerEntity> extends EntityModel<T> {
     private final ModelRenderer legBackRight;
     private final ModelRenderer legBackLeft;
 
-    public CrawlerModel() {
+
+
+    public CrawlerModel(float scale) {
+
         textureWidth = 64;
         textureHeight = 32;
 
@@ -60,6 +64,16 @@ public class CrawlerModel<T extends CrawlerEntity> extends EntityModel<T> {
         legFrontRight.render(matrixStack, buffer, packedLight, packedOverlay);
         legBackRight.render(matrixStack, buffer, packedLight, packedOverlay);
         legBackLeft.render(matrixStack, buffer, packedLight, packedOverlay);
+    }
+
+    @Override
+    protected Iterable<ModelRenderer> getHeadParts() {
+        return null;
+    }
+
+    @Override
+    protected Iterable<ModelRenderer> getBodyParts() {
+        return null;
     }
 
     public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {

@@ -2,14 +2,12 @@ package com.cinak.test.entities;
 
 import com.cinak.test.util.RegistryHandler;
 import net.minecraft.block.BlockState;
-import net.minecraft.entity.AgeableEntity;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.MobEntity;
+import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.passive.AnimalEntity;
+import net.minecraft.entity.passive.SheepEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.AbstractArrowEntity;
 import net.minecraft.item.Item;
@@ -23,7 +21,9 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.fml.common.Mod;
 
+import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import java.util.List;
 
 public class CrawlerEntity extends AnimalEntity {
 
@@ -44,19 +44,24 @@ public class CrawlerEntity extends AnimalEntity {
         .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.5D);
 
     }
-
-    public ActionResultType func_230254_b_(PlayerEntity p_230254_1_, Hand p_230254_2_) {
-        ItemStack itemstack = p_230254_1_.getHeldItem(p_230254_2_);
-        Item item = itemstack.getItem();
-        if (itemstack.getItem() == Items.BUCKET && !this.isChild()) {
-            p_230254_1_.playSound(SoundEvents.ENTITY_COW_MILK, 1.0F, 1.0F);
-            ItemStack itemstack1 = DrinkHelper.func_241445_a_(itemstack, p_230254_1_, Items.MILK_BUCKET.getDefaultInstance());
-            p_230254_1_.setHeldItem(p_230254_2_, itemstack1);
-            return ActionResultType.func_233537_a_(this.world.isRemote);
-        } else {
-            return super.func_230254_b_(p_230254_1_, p_230254_2_);
-        }
+    protected float getStandingEyeHeight(Pose poseIn, EntitySize sizeIn) {
+        return this.isChild() ? sizeIn.height * 0.95F : 1.3F;
     }
+
+    public CrawlerEntity createChild(AgeableEntity ageable) {
+        CrawlerEntity crawlerEntity = (CrawlerEntity)ageable;
+        CrawlerEntity crawlerEntity1 = ModEntityTypes.CRAWLER.get().create(this.world);
+        return crawlerEntity1;
+    }
+
+    /**
+     * Checks if the parameter is an item which this animal can be fed to breed it (wheat, carrots or seeds depending on
+     * the animal type)
+     */
+    public boolean isBreedingItem(ItemStack stack) {
+        return TEMPTATION_ITEMS.test(stack);
+    }
+
     @Override
     protected void registerGoals() {
         super.registerGoals();
@@ -67,7 +72,7 @@ public class CrawlerEntity extends AnimalEntity {
         this.goalSelector.addGoal(3,  new TemptGoal(this, 0.6,false,TEMPTATION_ITEMS ));
         this.goalSelector.addGoal(4,  new FollowParentGoal(this, 0.4));
         this.goalSelector.addGoal(5,  new RandomWalkingGoal(this, 0.5D));
-        this.goalSelector.addGoal(6, new WaterAvoidingRandomFlyingGoal(this,0.5));
+        this.goalSelector.addGoal(6, new WaterAvoidingRandomWalkingGoal(this,0.5));
         this.goalSelector.addGoal(7,  this.eatGrassGoal);
         this.goalSelector.addGoal(8,  new LookAtGoal(this, PlayerEntity.class, 10.0F));
         this.goalSelector.addGoal(9,  new LookRandomlyGoal(this));
@@ -112,14 +117,6 @@ public class CrawlerEntity extends AnimalEntity {
         this.playSound(SoundEvents.ENTITY_POLAR_BEAR_STEP, 0.15F,1F);
     }
 
-    @Nullable
-    @Override
-
-
-    public AgeableEntity createChild(AgeableEntity ageable) {
-        return ModEntityTypes.CRAWLER.get().create(this.world);
-
-    }
 
     @Override
     public void livingTick() {
@@ -137,4 +134,5 @@ public class CrawlerEntity extends AnimalEntity {
             super.handleStatusUpdate(id);
         }
     }
+
 }
