@@ -14,7 +14,7 @@ public class CrawlerRenderer extends MobRenderer<CrawlerEntity, CrawlerModel<Cra
     protected static final ResourceLocation TEXTURE = new ResourceLocation(DrakelDream.MOD_ID,"textures/entity/crawler.png");
 
     public CrawlerRenderer(EntityRendererManager renderManagerIn) {
-        super(renderManagerIn, new CrawlerModel<>(3), 0.7F);
+        super(renderManagerIn, new CrawlerModel<>(), 0.7F);
     }
 
     @Override

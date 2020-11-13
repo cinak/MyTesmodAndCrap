@@ -20,7 +20,7 @@ public class CrawlerModel<T extends CrawlerEntity> extends AgeableModel<T> {
 
 
 
-    public CrawlerModel(float scale) {
+    public CrawlerModel() {
 
         textureWidth = 64;
         textureHeight = 32;
