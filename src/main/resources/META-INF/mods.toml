@@ -8,9 +8,9 @@ issueTrackerURL="http://my.issue.tracker/" #optional
 
 modId="testermodding" #mandatory
 
-version="testversion-4" #mandatory
+version="1.16.1-1.0.0" #mandatory
 
-displayName="testermodding" #mandatory
+displayName="Drakels Dream" #mandatory
 
 updateJSONURL="http://myurl.me/" #optional
 
@@ -23,7 +23,7 @@ credits="Thanks for this example mod goes to cinak the great" #optional
 authors="Cinak and Nobody else" #optional
 
 description='''
-the testing mod for all of cinaks attempts'''
+a mod for cinak and his creations ignore the mod id ive added too much to change it'''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.examplemod]] #optional
     # the modid of the dependency
