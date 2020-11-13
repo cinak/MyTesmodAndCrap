@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "drakeldream:raw_crawler_meat"
+  },
+  "result": "drakeldream:cooked_crawler_meat",
+  "experience": 2.0,
+  "cookingtime": 80
+}

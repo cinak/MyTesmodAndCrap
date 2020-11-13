@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "fxx",
+    "faf",
+    "faf"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "drakeldream:ruby"
+    }, "a":
+  {
+    "item": "minecraft:stick"
+  }, "f":
+  {
+    "item": "minecraft:air"
+  }
+  },
+
+  "result":
+  {
+    "item": "drakeldream:ruby_hoe",
+    "count": 1
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "fff",
+    "xfx",
+    "xfx"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "drakeldream:ruby"
+    },
+    "f":
+    {
+      "item": "minecraft:air"
+    }
+  },
+
+  "result":
+  {
+    "item": "drakeldream:ruby_boots",
+    "count": 1
+  }
+}

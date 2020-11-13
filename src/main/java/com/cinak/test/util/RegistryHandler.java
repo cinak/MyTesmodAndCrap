@@ -1,6 +1,7 @@
 package com.cinak.test.util;
 
-import com.cinak.test.Test;
+
+import com.cinak.test.DrakelDream;
 import com.cinak.test.armor.ModArmorMaterial;
 import com.cinak.test.armor.ModArmorMaterialAmber;
 import com.cinak.test.blocks.*;
@@ -19,8 +20,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class RegistryHandler {
 
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create (ForgeRegistries.ITEMS, Test.MOD_ID);
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create (ForgeRegistries.BLOCKS, Test.MOD_ID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create (ForgeRegistries.ITEMS, DrakelDream.MOD_ID);
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create (ForgeRegistries.BLOCKS, DrakelDream.MOD_ID);
 
     public static void init() {
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
@@ -42,43 +43,43 @@ public class RegistryHandler {
 
     //tools only
     public static final RegistryObject<SwordItem> RUBY_SWORD = ITEMS.register("ruby_sword", () ->
-            new SwordItem(ModItemTier.RUBY, 3, -2.4F, new Item.Properties().group(Test.TAB)));
+            new SwordItem(ModItemTier.RUBY, 3, -2.4F, new Item.Properties().group(DrakelDream.TAB)));
     public static final RegistryObject<PickaxeItem> RUBY_PICKAXE = ITEMS.register("ruby_pickaxe", () ->
-            new PickaxeItem(ModItemTier.RUBY, 0, -2.8F, new Item.Properties().group(Test.TAB)));
+            new PickaxeItem(ModItemTier.RUBY, 0, -2.8F, new Item.Properties().group(DrakelDream.TAB)));
     public static final RegistryObject<ShovelItem> RUBY_SHOVEL = ITEMS.register("ruby_shovel", () ->
-            new ShovelItem(ModItemTier.RUBY, 0.5F, -3.0F, new Item.Properties().group(Test.TAB)));
+            new ShovelItem(ModItemTier.RUBY, 0.5F, -3.0F, new Item.Properties().group(DrakelDream.TAB)));
     public static final RegistryObject<AxeItem> RUBY_AXE = ITEMS.register("ruby_axe", () ->
-            new AxeItem(ModItemTier.RUBY, 5, -3.1F, new Item.Properties().group(Test.TAB)));
+            new AxeItem(ModItemTier.RUBY, 5, -3.1F, new Item.Properties().group(DrakelDream.TAB)));
     public static final RegistryObject<HoeItem> RUBY_HOE = ITEMS.register("ruby_hoe", () ->
-            new HoeItem(ModItemTier.RUBY,-1 , -3.1F, new Item.Properties().group(Test.TAB)));
+            new HoeItem(ModItemTier.RUBY,-1 , -3.1F, new Item.Properties().group(DrakelDream.TAB)));
     public static final RegistryObject<SwordItem> AMBER_SWORD = ITEMS.register("amber_sword", () ->
-            new SwordItem(ModItemTier.AMBER, 3, -2.4F, new Item.Properties().group(Test.TAB)));
+            new SwordItem(ModItemTier.AMBER, 3, -2.4F, new Item.Properties().group(DrakelDream.TAB)));
     public static final RegistryObject<PickaxeItem> AMBER_PICKAXE = ITEMS.register("amber_pickaxe", () ->
-            new PickaxeItem(ModItemTier.AMBER, 0, -2.8F, new Item.Properties().group(Test.TAB)));
+            new PickaxeItem(ModItemTier.AMBER, 0, -2.8F, new Item.Properties().group(DrakelDream.TAB)));
     public static final RegistryObject<ShovelItem> AMBER_SHOVEL = ITEMS.register("amber_shovel", () ->
-            new ShovelItem(ModItemTier.AMBER, 0.5F, -3.0F, new Item.Properties().group(Test.TAB)));
+            new ShovelItem(ModItemTier.AMBER, 0.5F, -3.0F, new Item.Properties().group(DrakelDream.TAB)));
     public static final RegistryObject<AxeItem> AMBER_AXE = ITEMS.register("amber_axe", () ->
-            new AxeItem(ModItemTier.AMBER, 5, -3.1F, new Item.Properties().group(Test.TAB)));
+            new AxeItem(ModItemTier.AMBER, 5, -3.1F, new Item.Properties().group(DrakelDream.TAB)));
     public static final RegistryObject<HoeItem> AMBER_HOE = ITEMS.register("amber_hoe", () ->
-            new HoeItem(ModItemTier.AMBER,-1 , -3.1F, new Item.Properties().group(Test.TAB)));
+            new HoeItem(ModItemTier.AMBER,-1 , -3.1F, new Item.Properties().group(DrakelDream.TAB)));
 
     //armor only
     public static final RegistryObject<ArmorItem> RUBY_HELMET = ITEMS.register("ruby_helmet", ()->
-            new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.HEAD, new Item.Properties().group(Test.TAB)));
+            new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.HEAD, new Item.Properties().group(DrakelDream.TAB)));
     public static final RegistryObject<ArmorItem> RUBY_CHESTPLATE = ITEMS.register("ruby_chestplate", ()->
-            new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.CHEST, new Item.Properties().group(Test.TAB)));
+            new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.CHEST, new Item.Properties().group(DrakelDream.TAB)));
     public static final RegistryObject<ArmorItem> RUBY_LEGGINGS = ITEMS.register("ruby_leggings", ()->
-            new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.LEGS, new Item.Properties().group(Test.TAB)));
+            new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.LEGS, new Item.Properties().group(DrakelDream.TAB)));
     public static final RegistryObject<ArmorItem> RUBY_BOOTS = ITEMS.register("ruby_boots", ()->
-            new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.FEET, new Item.Properties().group(Test.TAB)));
+            new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.FEET, new Item.Properties().group(DrakelDream.TAB)));
     public static final RegistryObject<ArmorItem> AMBER_HELMET = ITEMS.register("amber_helmet", ()->
-            new ArmorItem(ModArmorMaterialAmber.AMBER, EquipmentSlotType.HEAD, new Item.Properties().group(Test.TAB)));
+            new ArmorItem(ModArmorMaterialAmber.AMBER, EquipmentSlotType.HEAD, new Item.Properties().group(DrakelDream.TAB)));
     public static final RegistryObject<ArmorItem> AMBER_CHESTPLATE = ITEMS.register("amber_chestplate", ()->
-            new ArmorItem(ModArmorMaterialAmber.AMBER, EquipmentSlotType.CHEST, new Item.Properties().group(Test.TAB)));
+            new ArmorItem(ModArmorMaterialAmber.AMBER, EquipmentSlotType.CHEST, new Item.Properties().group(DrakelDream.TAB)));
     public static final RegistryObject<ArmorItem> AMBER_LEGGINGS = ITEMS.register("amber_leggings", ()->
-            new ArmorItem(ModArmorMaterialAmber.AMBER, EquipmentSlotType.LEGS, new Item.Properties().group(Test.TAB)));
+            new ArmorItem(ModArmorMaterialAmber.AMBER, EquipmentSlotType.LEGS, new Item.Properties().group(DrakelDream.TAB)));
     public static final RegistryObject<ArmorItem> AMBER_BOOTS = ITEMS.register("amber_boots", ()->
-            new ArmorItem(ModArmorMaterialAmber.AMBER, EquipmentSlotType.FEET, new Item.Properties().group(Test.TAB)));
+            new ArmorItem(ModArmorMaterialAmber.AMBER, EquipmentSlotType.FEET, new Item.Properties().group(DrakelDream.TAB)));
 
 
     //mobs

@@ -1,6 +1,6 @@
 package com.cinak.test.armor;
 
-import com.cinak.test.Test;
+import com.cinak.test.DrakelDream;
 import com.cinak.test.util.RegistryHandler;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
@@ -14,7 +14,7 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterial implements IArmorMaterial {
 
-    RUBY(Test.MOD_ID + ":ruby", 38, new int[] { 3, 8, 10, 3 }, 25,
+    RUBY(DrakelDream.MOD_ID + ":ruby", 38, new int[] { 3, 8, 10, 3 }, 25,
             SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 4.0F, () -> {return Ingredient.fromItems(RegistryHandler.RUBY.get());  }, 0.5f);
 
 

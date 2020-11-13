@@ -1,6 +1,6 @@
 package com.cinak.test.client.render;
 
-import com.cinak.test.Test;
+import com.cinak.test.DrakelDream;
 import com.cinak.test.client.model.BorsusModel;
 import com.cinak.test.client.model.DrakelModel;
 import com.cinak.test.entities.BorsusEntity;
@@ -11,7 +11,7 @@ import net.minecraft.util.ResourceLocation;
 
 public class DrakelRenderer extends MobRenderer<DrakelEntity, DrakelModel> {
 
-    protected static final ResourceLocation TEXTURE = new ResourceLocation(Test.MOD_ID,"textures/entity/drakel_entity.png");
+    protected static final ResourceLocation TEXTURE = new ResourceLocation(DrakelDream.MOD_ID,"textures/entity/drakel_entity.png");
 
     public DrakelRenderer(EntityRendererManager renderManagerIn)
     { super(renderManagerIn, new DrakelModel(), 2F); }

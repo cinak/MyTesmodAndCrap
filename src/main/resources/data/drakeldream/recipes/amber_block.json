@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xxx",
+    "xxx",
+    "xxx"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "drakeldream:amber"
+    }
+  },
+  "result":
+  {
+    "item": "drakeldream:amber_block",
+    "count": 1
+  }
+}

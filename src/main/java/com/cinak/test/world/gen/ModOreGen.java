@@ -1,6 +1,6 @@
 package com.cinak.test.world.gen;
 
-import com.cinak.test.Test;
+import com.cinak.test.DrakelDream;
 import com.cinak.test.util.RegistryHandler;
 import net.minecraft.block.BlockState;
 import net.minecraft.world.biome.Biome;
@@ -16,7 +16,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 
-@Mod.EventBusSubscriber(modid = Test.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(modid = DrakelDream.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModOreGen {
 
     @SubscribeEvent

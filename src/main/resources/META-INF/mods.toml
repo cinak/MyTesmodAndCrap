@@ -6,7 +6,7 @@ issueTrackerURL="http://my.issue.tracker/" #optional
 
 [[mods]] #mandatory
 
-modId="testermodding" #mandatory
+modId="drakeldream" #mandatory
 
 version="1.16.1-1.0.0" #mandatory
 
@@ -23,7 +23,7 @@ credits="Thanks for this example mod goes to cinak the great" #optional
 authors="Cinak and Nobody else" #optional
 
 description='''
-a mod for cinak and his creations ignore the mod id ive added too much to change it'''
+a mod for cinak and his creations'''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.examplemod]] #optional
     # the modid of the dependency
@@ -43,7 +43,7 @@ a mod for cinak and his creations ignore the mod id ive added too much to change
     versionRange="[1.15.2]"
     ordering="NONE"
     side="BOTH"
-[[dependencies.testermodding]]
+[[dependencies.drakeldream]]
 modId="geckolib"
 mandatory=true
 versionRange="[, 2.5)"

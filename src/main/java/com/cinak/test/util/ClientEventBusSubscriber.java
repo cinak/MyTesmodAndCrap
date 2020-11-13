@@ -1,6 +1,6 @@
 package com.cinak.test.util;
 
-import com.cinak.test.Test;
+import com.cinak.test.DrakelDream;
 import com.cinak.test.client.render.AggresivePlaceHolderRenderer;
 import com.cinak.test.client.render.BorsusRenderer;
 import com.cinak.test.client.render.CrawlerRenderer;
@@ -12,7 +12,7 @@ import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
-@Mod.EventBusSubscriber(modid = Test.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@Mod.EventBusSubscriber(modid = DrakelDream.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ClientEventBusSubscriber {
 
     @SubscribeEvent

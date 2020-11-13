@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:emeralds",
+    "minecraft:diamond",
+    "drakeldream:ruby",
+    "drakeldream:amber"
+  ]
+}

@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:emeralds",
-    "minecraft:diamond",
-    "testermodding:ruby",
-    "testermodding:amber"
-  ]
-}

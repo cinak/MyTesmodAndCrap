@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "drakeldream:ruby_ore"
+  },
+  "result": "drakeldream:ruby",
+  "experience": 1.0,
+  "cookingtime": 100
+}
