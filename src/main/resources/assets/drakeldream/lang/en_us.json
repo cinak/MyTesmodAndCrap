@@ -32,11 +32,11 @@
   "block.drakeldream.amber_ore": "Amber Ore",
   "block.drakeldream.ducky_trophy": "Ducky Trophy",
   "block.drakeldream.mushroom": "Mushroom",
-  "itemGroup.testTab": "Testing",
-  "itemGroup.testBlockTab": "Testing Blocks",
+  "itemGroup.DrakelsDreamItemTab": "Drakel Dream Items",
+  "itemGroup.DrakelDreamBlockTab": "Drakel Dream Blocks",
   "entity.drakeldream.crawler":"Crawler",
-  "entity.drakeldream.drakel":"Drakel",
-  "entity.drakeldream.borsus":"Borsus"
+  "entity.drakeldream.drakel_entity":"Drakel",
+  "entity.drakeldream.borsus_entity":"Borsus"
 
 
 
