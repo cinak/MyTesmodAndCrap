@@ -10,7 +10,7 @@ import net.minecraft.client.renderer.entity.model.QuadrupedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.util.math.MathHelper;
 
-public class CrawlerModel<T extends CrawlerEntity> extends AgeableModel<T> {
+public class CrawlerModel<T extends CrawlerEntity> extends QuadrupedModel<T> {
 
     private final ModelRenderer head;
     private final ModelRenderer body;
@@ -22,7 +22,7 @@ public class CrawlerModel<T extends CrawlerEntity> extends AgeableModel<T> {
 
 
     public CrawlerModel() {
-        super(false, 24.0F, 0.0F);
+        super(12, 0.0F, false, 10.0F, 4.0F, 2.0F, 2.0F, 24);
         textureWidth = 64;
         textureHeight = 32;
 
