@@ -85,6 +85,11 @@ public class DrakelEntity extends LeoEntity implements IAngerable, IAnimatedEnti
     public EntityAnimationManager animationControllers = new EntityAnimationManager();
     private AnimationController moverController = new EntityAnimationController(this, "moveController", 10F, this::moverController);
 
+    @Override
+    public boolean preventDespawn()
+    {
+        return isTamed();
+    }
 
 
     public DrakelEntity(EntityType<? extends DrakelEntity> type, World worldIn) {

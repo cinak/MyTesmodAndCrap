@@ -3,6 +3,10 @@ package com.cinak.test.client.render;
 import com.cinak.test.DrakelDream;
 import com.cinak.test.client.model.BorsusModel;
 import com.cinak.test.entities.BorsusEntity;
+import com.mojang.blaze3d.matrix.MatrixStack;
+import com.mojang.blaze3d.vertex.IVertexBuilder;
+import net.minecraft.client.renderer.IRenderTypeBuffer;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.util.ResourceLocation;
@@ -19,4 +23,8 @@ public class BorsusRenderer extends MobRenderer<BorsusEntity, BorsusModel> {
         return TEXTURE;
     }
 
+    @Override
+    protected void preRenderCallback(BorsusEntity entitylivingbaseIn, MatrixStack matrixStackIn, float partialTickTime) {
+        super.preRenderCallback(entitylivingbaseIn, matrixStackIn, partialTickTime);
+    }
 }
