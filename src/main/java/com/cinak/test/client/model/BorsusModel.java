@@ -115,7 +115,7 @@ public class BorsusModel extends AnimatedEntityModel<BorsusEntity> {
     @Override
     public ResourceLocation getAnimationFileLocation()
     {
-        return new ResourceLocation("testermodding", "animations/borsus_entity.json");
+        return new ResourceLocation("drakeldream", "animations/borsus_entity.json");
     }
 
     @Override

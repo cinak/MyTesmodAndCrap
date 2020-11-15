@@ -273,7 +273,7 @@ public class DrakelModel extends AnimatedEntityModel<DrakelEntity> {
     @Override
     public ResourceLocation getAnimationFileLocation()
     {
-        return new ResourceLocation("testermodding", "animations/drakel_entity.json");
+        return new ResourceLocation("drakeldream", "animations/drakel_entity.json");
     }
     @Override
     public void render(MatrixStack matrixStackIn, IVertexBuilder bufferIn, int packedLightIn, int packedOverlayIn, float red, float green, float blue, float alpha) {
