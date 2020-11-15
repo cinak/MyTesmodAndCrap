@@ -22,7 +22,6 @@ public class CrawlerModel<T extends CrawlerEntity> extends AgeableModel<T> {
 
 
     public CrawlerModel() {
-        super(false, 24.0F, 0.0F);
         textureWidth = 64;
         textureHeight = 32;
 
@@ -58,14 +57,8 @@ public class CrawlerModel<T extends CrawlerEntity> extends AgeableModel<T> {
     }
 
     @Override
-    public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha){
+    public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
         super.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-        head.render(matrixStack, buffer, packedLight, packedOverlay);
-        body.render(matrixStack, buffer, packedLight, packedOverlay);
-        legFrontLeft.render(matrixStack, buffer, packedLight, packedOverlay);
-        legFrontRight.render(matrixStack, buffer, packedLight, packedOverlay);
-        legBackRight.render(matrixStack, buffer, packedLight, packedOverlay);
-        legBackLeft.render(matrixStack, buffer, packedLight, packedOverlay);
     }
 
 

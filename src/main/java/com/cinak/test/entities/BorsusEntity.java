@@ -220,12 +220,6 @@ public class BorsusEntity extends TameableEntity implements IAngerable, IAnimate
         this.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(14.0D);
     }
 
-    @Override
-    public boolean preventDespawn()
-    {
-        return isTamed();
-    }
-
     public ActionResultType func_230254_b_(PlayerEntity p_230254_1_, Hand p_230254_2_) {
         ItemStack itemstack = p_230254_1_.getHeldItem(p_230254_2_);
         Item item = itemstack.getItem();
@@ -595,7 +589,6 @@ public class BorsusEntity extends TameableEntity implements IAngerable, IAnimate
 
         }
     }
-
 
     class MeleeAttackGoal extends net.minecraft.entity.ai.goal.MeleeAttackGoal {
         public MeleeAttackGoal() {
