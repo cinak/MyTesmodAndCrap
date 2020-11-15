@@ -22,9 +22,4 @@ public class BorsusRenderer extends MobRenderer<BorsusEntity, BorsusModel> {
     public ResourceLocation getEntityTexture(BorsusEntity entity) {
         return TEXTURE;
     }
-
-    @Override
-    protected void preRenderCallback(BorsusEntity entitylivingbaseIn, MatrixStack matrixStackIn, float partialTickTime) {
-        super.preRenderCallback(entitylivingbaseIn, matrixStackIn, partialTickTime);
-    }
 }
